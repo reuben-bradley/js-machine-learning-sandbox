@@ -1,0 +1,17 @@
+{
+  "name": "machine-learning-with-js",
+  "version": "0.1.0",
+  "description": "Exercise in machine learning with Javascript libraries",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Reuben Bradley",
+  "license": "MIT",
+  "dependencies": {
+    "csvtojson": "^1.1.7",
+    "ml-knn": "^2.1.1",
+    "ml-regression": "^4.4.2",
+    "synaptic": "^1.1.2"
+  }
+}
