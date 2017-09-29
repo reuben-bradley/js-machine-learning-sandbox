@@ -14,7 +14,7 @@ const imageLoader = require('./lib/mnist-image-loader');
     const maxSetSize = 10000;
     
     // Create our neural network
-    const digitNN = new synaptic.Architect.Perceptron(784, 15, 10);
+    const digitNN = new synaptic.Architect.Perceptron(784, 75, 10);
     const digitTrainer = new synaptic.Trainer(digitNN);
     
     
@@ -102,7 +102,7 @@ const imageLoader = require('./lib/mnist-image-loader');
                     let output = digitTrainer.test(testSet, {});
                     console.log(`=== Test Results ===`);
                     console.log(`Time elapsed: ${output.time}ms`);
-                    console.log(`Test error: ${output.error}`);
+                    console.log(`Test error: ${utils.formatAsPercentage(output.error)}%`);
                 });
         });
 })();
