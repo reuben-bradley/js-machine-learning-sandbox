@@ -8,5 +8,6 @@ The data sets used in testing are all publicly available online.
 * KNN (k-Nearest Neighbour): [Iris Dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data), courtesy of University of California, Irvine
 * Temperature: Randomly generated internally
 * MNIST digits: [MNIST Image Database](http://yann.lecun.com/exdb/mnist/)
+* CIFAR-10 images: [CIFAR-10 and CIFAR-100 Datasets](http://www.cs.toronto.edu/~kriz/cifar.html)
 
 All data sets are expected to reside within the `./data` folder.
