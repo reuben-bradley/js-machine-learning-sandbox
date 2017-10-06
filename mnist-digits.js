@@ -39,25 +39,11 @@ const imageLoader = require('./lib/mnist-image-loader');
     // Function to load and dress data from the specified files
     const loadData = function( labelFile, imageFile ) {
         return new Promise(( resolve, reject ) => {
-            let labels, images;
-            
-            // Check for both pieces, and if we have them, resolve the promise
-            const checkComplete = function() {
-                if ( labels && images ) {
-                    resolve(dressData(labels, images));
-                }
-            };
-            
-            // Load the labels
-            labelLoader(labelFile).then(( loadedLabels ) => {
-                labels = loadedLabels;
-                checkComplete();
-            });
-            // Load the images
-            imageLoader(imageFile).then(( loadedImages ) => {
-                images = loadedImages;
-                checkComplete();
-            });
+            // Load the labels and images, returning the dressed data when complete
+            Promise.all([ labelLoader(labelFile), imageLoader(imageFile) ])
+                .then(( values ) => {
+                    resolve(dressData(values[0], values[1]));
+                });
         });
     };
     
@@ -103,6 +89,7 @@ const imageLoader = require('./lib/mnist-image-loader');
                     console.log(`=== Test Results ===`);
                     console.log(`Time elapsed: ${output.time}ms`);
                     console.log(`Test error: ${utils.formatAsPercentage(output.error)}%`);
+                    process.exit(0);
                 });
         });
 })();
