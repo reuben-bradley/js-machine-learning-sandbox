@@ -1,3 +1,9 @@
+/**
+ * Inspired by Abhishek Soni's post on HackerNoon - https://hackernoon.com/machine-learning-with-javascript-part-2-da994c17d483
+ * 
+ * @author Reuben Bradley
+ */
+
 const KNN = require('ml-knn');
 const csv = require('csvtojson');
 const readline = require('readline');
