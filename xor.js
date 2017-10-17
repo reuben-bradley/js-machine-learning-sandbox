@@ -1,3 +1,9 @@
+/**
+ * Inspired by the XOR demo for Synaptic - https://synaptic.juancazala.com/#/xor
+ * 
+ * @author Reuben Bradley
+ */
+
 const synaptic = require('synaptic');
 
 const utils = require('./lib/utils');

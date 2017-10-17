@@ -1,3 +1,8 @@
+/**
+ * Inspired by Ashraff Hathibelagal's post on Progur - http://progur.com/2016/09/how-to-create-deep-neural-networks-in-javascript.html
+ * 
+ * @author Reuben Bradley
+ */
 const synaptic = require('synaptic');
 
 const utils = require('./lib/utils');

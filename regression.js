@@ -1,3 +1,9 @@
+/**
+ * Inspired by Abhishek Soni's post on HackerNoon - https://hackernoon.com/machine-learning-with-javascript-part-1-9b97f3ed4fe5
+ * 
+ * @author Reuben Bradley
+ */
+
 const ml = require('ml-regression');
 const csv = require('csvtojson');
 const readline = require('readline');   // Built-in node module
