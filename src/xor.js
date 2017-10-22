@@ -57,8 +57,11 @@ const utils = require('./lib/utils');
         for ( let i = 0; i < testData.length; i++ ) {
             inputLayer.activate(testData[i]['input']);
             hiddenLayer.activate();
-            result = Math.round( (outputLayer.activate())[0] );
-            console.log(`Input: ${testData[i]['input']}, expected result: ${testData[i]['output']}, actual result: ${result}`);
+            rawResult = (outputLayer.activate())[0];
+            result = Math.round( rawResult );
+            console.log(`Input: ${testData[i]['input']}`);
+            console.log(`   Expected result: ${testData[i]['output']}`);
+            console.log(`   Output: ${result} (${rawResult})`);
         }
     };
     

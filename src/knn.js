@@ -87,6 +87,7 @@ const getUserInput = ( model, types ) => {
             if ( parseInt(answer) == 2 || answer.toLowerCase() === 'exit' || answer.toLowerCase() === 'q' ) {
                 console.log('Quitting!');
                 prompt.close();
+                process.exit(0);
                 return;
             }
             else if ( parseInt(answer) == 1 ) {
